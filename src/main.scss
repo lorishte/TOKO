@@ -162,6 +162,22 @@ $warm-light-grey-2: #ece9e1;
   align-self: $value;
 }
 
+@mixin translate($x: 0, $y: 0) {
+  -webkit-transform: translate($x, $y);
+  -moz-transform: translate($x, $y);
+  -ms-transform: translate($x, $y);
+  -o-transform: translate($x, $y);
+  transform: translate($x, $y);
+}
+
+@mixin scale($value) {
+  -webkit-transform: scale($value);
+  -moz-transform: scale($value);
+  -ms-transform: scale($value);
+  -o-transform: scale($value);
+  transform: scale($value);
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -216,8 +232,8 @@ h1, h2, h3 {
 }
 
 h3 {
-  font-size: 2em;
-  color: #ccc;
+  font-size: 1.1em;
+  //color: #ccc;
   text-transform: uppercase;
   font-weight: 300;
 }
@@ -367,12 +383,13 @@ p {
 
         &:nth-child(1) {
           background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url("https://fbfttg.db.files.1drv.com/y4mF4K6OZH_ZLh-121YlE4FK-Z7qecc9ot4Lb0j7xNco3IrRvNZ6g8A4FqsngyjkJGrkG7Tz3jnPRXvzb9FZWRe64x_R3VEuqsfusnGZEPMWGL3NRBOQlQKuOW1h5-gwRHFopdivNn0gMnysbyS7NppILcM35i5ddlPgoFgNKZOBD36PqQb6nj8lmrST5hj6ieLLRbebhgk1dXbbcFJ1SBTfQ?width=2500&height=1667&cropmode=none") no-repeat center/cover;
-          //background-attachment: fixed;
+          background-attachment: fixed;
+          background-position: 50% 450%;
         }
 
         &:nth-child(2) {
-          background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)),url("https://q7n2zg.db.files.1drv.com/y4mfjIVsv9vKkjqVS_HY8UXn0Tv7uas43ceTjVsRN2fV7fanEakMLNJtao8ICw-c8uVDe777oxCrxDRzbC3pEQ-RdeU5gdT4SziqE2Omc-UkX81D_ZVvZJW9IMixKZ54CuCvaAbMfxI9UULhDCEBWJLxTVXzAAY2-8e23SP9ViBixPICJdTMoSsHcEJrkawdl5jdwMf0gPU2RZ2uSB7BXbv8A?width=1700&height=1129&cropmode=none") no-repeat bottom/cover;
-          //background-attachment: fixed;
+          background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url("https://7ypqbg.db.files.1drv.com/y4mJWM9IXzB_xqgic7eplcF7ZW06n2GGJyybok4eq4x0R31znVbkad5rgPOj5Mk7RGGuDDMCkEi95uBI8banAnyk88iCnONCvmb5qqir7bexMKIOvPoqI_HIwwyE6XI_FT2UcuQnqueeZBC3_arRLiYXGQp0tpAlhuKeRmgMQxo8MbBtihVjXqxe5k0lYuGmmdT0FNVMr2pB1qZ1cTq9ZkdUg?width=2400&height=1599&cropmode=none") no-repeat bottom/cover;
+          background-attachment: fixed;
         }
 
         .slide-text {
@@ -482,7 +499,6 @@ p {
       }
 
       .article-headline {
-        font-size: 1.1em;
         margin-top: 20px;
       }
 
@@ -533,7 +549,6 @@ p {
       text-align: center;
       background-color: rgba(255, 255, 255, 0);
 
-
       .logo {
         width: 60px;
         margin: auto;
@@ -554,9 +569,92 @@ p {
 
   #teasers {
     @include flex;
+    @include flex-wrap(wrap);
 
     .article {
+      position: relative;
+      height: 300px;
+      width: 100%;
+      overflow: hidden;
+      background-color: $warm-light-grey;
       @include flex-basis(50%);
+      @include transition;
+
+      @include flex;
+
+      &:first-of-type {
+        @include flex-basis(100%);
+      }
+
+      .image-container {
+        position: relative;
+        height: inherit;
+        overflow: hidden;
+        @include flex-basis(50%);
+        @include transition;
+        order: 2;
+
+        img {
+          position: absolute;
+          left: 0;
+          top: 0;
+          height: 100%;
+          width: auto;
+          @include transition-slow;
+
+        }
+      }
+
+      .article-info {
+        @include flex-basis(50%);
+        padding: 15px 25px;
+        font-size: .8em;
+        order: 1;
+
+        .article-headline {
+          position: absolute;
+          top: 45%;
+          left: 50%;
+          @include translate(-50%, -130%);
+          padding: 10px 20px;
+          background-color: rgba(255, 255, 255, 1);
+          text-align: center;
+          @include transition;
+        }
+
+        .article-text {
+          opacity: 0;
+          @include transition-slow;
+        }
+      }
+
+      &:hover {
+        cursor: pointer;
+
+        .image-container {
+          //opacity: .5;
+          border-left: 2px solid $black;
+
+          img {
+            left: -10%;
+          }
+        }
+
+        .article-text {
+          opacity: 1;
+          @include translate(0, 40px)
+        }
+
+        .article-headline {
+          background-color: $black;
+          color: $medium-grey;
+          @include translate(-5px, -130%);
+        }
+      }
     }
   }
+}
+
+#footer {
+  height: 100px;
 }
