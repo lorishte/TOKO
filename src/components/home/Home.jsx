@@ -1,5 +1,9 @@
 import React from 'react';
 
+import Slider from './slider/Slider';
+import WhyUs from './whyUs/WhyUs';
+import TokoCoffee from './tokoCoffee/TokoCoffee';
+import Teasers from './teasers/Teasers';
 
 class Home extends React.Component {
 	constructor (props) {
@@ -10,7 +14,10 @@ class Home extends React.Component {
 
 		return (
 			<div id="home">
-				Home
+				<Slider/>
+				<WhyUs/>
+				<TokoCoffee/>
+				<Teasers/>
 			</div>
 		);
 	}
