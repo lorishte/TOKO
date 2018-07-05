@@ -419,8 +419,28 @@ p {
 #home {
   #carousel {
     position: relative;
-    //width: 80%;
-    //margin: auto;
+
+    .slide-text {
+      width: 60%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      padding: 20px;
+      z-index: 5;
+      @include translate(-50%, -50%);
+      //background-color: #ffffff96;
+
+      .headline {
+        font-size: 3em;
+        text-align: center;
+        text-transform: uppercase;
+        line-height: 1em;
+        margin-top: 0;
+        animation: slide-left 2s;
+        color: $white;
+        text-shadow: 2px 2px 5px rgba(100, 100, 100, .7);
+      }
+    }
 
     .carousel-content {
       width: 100%;
@@ -454,29 +474,6 @@ p {
           background-attachment: fixed;
           background-position: 50% 0;
 
-        }
-
-        .slide-text {
-          width: 550px;
-          position: absolute;
-          top: 30%;
-          right: 50px;
-          padding: 20px;
-          z-index: 5;
-          //background-color: #ffffff96;
-
-          .headline {
-            font-size: 2em;
-            text-transform: uppercase;
-            line-height: 1em;
-            margin-top: 0;
-            animation: slide-left 2s;
-          }
-
-          .description {
-            margin-top: 20px;
-            line-height: 1.3em;
-          }
         }
 
         &.active {
@@ -547,57 +544,51 @@ p {
     }
   }
 
-  #why-us {
+  #hero-section {
 
-    #why-us-icons {
+    .container {
+      padding: 20px 10%;
+    }
+
+    #hero-icons {
       @include flex;
       @include flex-wrap(wrap);
-      padding: 10px;
-      background-color: $offices;
 
       .article {
         @include flex-basis(25%);
 
-        @include flex;
-        @include align-items(center);
-        @include justify-content(center);
-
-        //text-align: center;
+        text-align: center;
         padding: 0 30px;
 
         .icon-container {
-          @include flex-basis(40px);
-
           @include inline-flex;
           @include align-items(center);
           @include justify-content(center);
           flex-grow: 0;
 
-          width: 40px;
-          height: 40px;
-          //background-color: $primary;
-          //border: 1px dotted rgba(255, 255, 255, .5);;
-          padding: 6px;
-          margin-right: 15px;
-          border-radius: 3px;
+          width: 60px;
+          height: 60px;
+          background-color: $primary;
+          padding: 15px;
+          border-radius: 50%;
         }
 
         .article-headline {
-          @include flex-basis(75%);
-          margin: 10px;
-          //border-top: 1px solid rgba(255, 255, 255, .2);
           font-size: .9em;
-          line-height: 1em;
-          color: $white;
+          line-height: 1.2em;
+          margin: 15px 0 0 0;
         }
 
         &:last-of-type {
           .icon-container {
-            padding: 3px;
+            padding: 10px;
           }
         }
       }
     }
+  }
+
+  #why-us {
 
     .section-info {
       //text-align: center;
@@ -674,6 +665,14 @@ p {
       @include flex-basis(100%);
     }
 
+    h4 {
+      font-size: 2em;
+      background-color: $offices;
+      color: $white;
+      line-height: 1em;
+      padding: 10px;
+    }
+
     .article {
       position: relative;
       height: 350px;
@@ -686,7 +685,7 @@ p {
 
       overflow: hidden;
       background-color: $white;
-      border: 10px solid $warm-light-grey;
+      border: 15px solid $warm-light-grey;
 
       .image-container {
         position: relative;
@@ -719,6 +718,8 @@ p {
         font-weight: 400;
         z-index: 2;
       }
+
+
 
       .article-info {
         @include flex-basis(50%);

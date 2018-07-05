@@ -1,10 +1,9 @@
 import React from 'react';
 
 import Slider from './slider/Slider';
-import WhyUs from './whyUs/WhyUs';
-import TokoCoffee from './tokoCoffee/TokoCoffee';
+import HeroSection from './hero-section/HeroSection';
 import Teasers from './teasers/Teasers';
-
+import WhyUs from './whyUs/WhyUs';
 
 class Home extends React.Component {
 	constructor (props) {
@@ -12,20 +11,16 @@ class Home extends React.Component {
 	}
 
 	componentDidMount () {
-		window.scrollTo(0,0);
+		window.scrollTo(0, 0);
 	}
-
 
 	render () {
 		return (
 			<div id="home">
 				<Slider/>
-
-				<WhyUs/>
-
+				<HeroSection/>
 				<Teasers/>
-				{/*<TokoCoffee/>*/}
-
+				<WhyUs/>
 			</div>
 		);
 	}

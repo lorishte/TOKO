@@ -91,24 +91,17 @@ class Slider extends React.Component {
 					      onClick={() => this.loadSlide(1)}/>
 				</div>
 
+				<div className="slide-text">
+					<h1 className="headline">Всичко за кафето <br/>на работното място</h1>
+				</div>
+
 				<div className="carousel-content" ref={this.carousel}>
+
 					<div className="carousel-item active">
-						<div className="slide-text">
-							<h1 className="headline">Всичко за кафето на работното място</h1>
-							<p className="description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-								accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
-								veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-						</div>
 						<div className="slide-background"/>
 					</div>
 
-					<div className="carousel-item ">
-						<div className="slide-text">
-							<h1 className="headline">Another One</h1>
-							<p className="description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-								accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
-								veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-						</div>
+					<div className="carousel-item">
 						<div className="slide-background"/>
 					</div>
 				</div>

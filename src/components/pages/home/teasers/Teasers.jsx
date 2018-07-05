@@ -10,14 +10,15 @@ class Teasers extends React.Component {
 		return (
 			<div id="teasers" className="container">
 
-				<h2 className="section-headline">Гъвкави схеми. Защото бизнесът е различен.</h2>
+				{/*<h2 className="section-headline">Гъвкави схеми. Защото бизнесът е различен.</h2>*/}
 
 				<article id="promo-teaser" className="article">
 					<div className="image-container">
-						{/*<img src="https://7ypwbg.db.files.1drv.com/y4mhwDdsv8WmLAKcczNxVy-C6WYD93PWUiyUtNMGZMKDoU-pZxOAPYOuXL8S9cB1Na227ED8zoBIXepBxqEKD0-YYQ6Y3yqzUUsLfWTLq1zfx01esjSnv1nfwaFdeHloP5Gp2ur1DvnSUABZr7iKkJD2udOy6nKG-_AWZFv1CPbqKLZ79n1BBHfZY5xbSi5eFbyiA2RwabcTkGVIYiw2gO_Zg?width=2000&height=1979&cropmode=none"/>*/}
-						<img src="https://edqvww.db.files.1drv.com/y4mlRz2RqmBy5vw2CxQe5yA2dUjLwsVhLAB44Ihc207Jzm6ZS2-B8IO_r7MuDK7j0_n-0NKvEuTusOU2ovrl7aRfQsIKAfzPgYcNUgjreUxVU-ykbnr79IbMiYuYq8JTneSRk5Lnu4aw5R9hr172iCROg2BLYx75KMqbsnwBzSAwp5HtmvVMisxHKsjkzhad7kNxrYmf4Afr8LB_rb9XWyFBA?width=2000&height=1979&cropmode=none"/>
+						<img src="https://7ypwbg.db.files.1drv.com/y4mhwDdsv8WmLAKcczNxVy-C6WYD93PWUiyUtNMGZMKDoU-pZxOAPYOuXL8S9cB1Na227ED8zoBIXepBxqEKD0-YYQ6Y3yqzUUsLfWTLq1zfx01esjSnv1nfwaFdeHloP5Gp2ur1DvnSUABZr7iKkJD2udOy6nKG-_AWZFv1CPbqKLZ79n1BBHfZY5xbSi5eFbyiA2RwabcTkGVIYiw2gO_Zg?width=2000&height=1979&cropmode=none"/>
+						{/*<img src="https://edqvww.db.files.1drv.com/y4mlRz2RqmBy5vw2CxQe5yA2dUjLwsVhLAB44Ihc207Jzm6ZS2-B8IO_r7MuDK7j0_n-0NKvEuTusOU2ovrl7aRfQsIKAfzPgYcNUgjreUxVU-ykbnr79IbMiYuYq8JTneSRk5Lnu4aw5R9hr172iCROg2BLYx75KMqbsnwBzSAwp5HtmvVMisxHKsjkzhad7kNxrYmf4Afr8LB_rb9XWyFBA?width=2000&height=1979&cropmode=none"/>*/}
 					</div>
-					<h3 className="article-headline">-50%</h3>
+					<h3 className="article-headline">-50%<br/>
+						Промо сет</h3>
 					<div className="article-info">
 						<h4>-50%</h4>
 						<p className="article-text">
@@ -34,8 +35,8 @@ class Teasers extends React.Component {
 							src="https://ipqpqa.db.files.1drv.com/y4mMfdJL_YQGDQIyNR1Uwulr7qZeEPnRRS7kyCLKr4_rKS1G0F_Aq3EugTcbfItfwsRaMsQ4pkioZBq7dB0RKXbpYzi5mVRI88c4BQzPkM-IZoMiskSTAsq1Oq_W-jbx-3YwKmOvIdufHSkrkG0xr772JRlVT-OBHhGD_XdR3Cyx38mW8-BWhgI0grSNRjA6MiNyxQwkrSAZojDa0r3secyzA?width=693&height=461&cropmode=none"/>
 					</div>
 					<div className="article-info">
-						<h3 className="article-headline">Решения за офиси</h3>
-						<h4>Нашето най-добро предложение</h4>
+						{/*<h3 className="article-headline">Решения за офиси</h3>*/}
+						<h4 className="headline">Решения за офиси</h4>
 
 						<ul className="article-text">
 							<li className="bullets">Истинско кафе</li>
@@ -52,8 +53,8 @@ class Teasers extends React.Component {
 							src="https://fbfztg.db.files.1drv.com/y4mXzHHhfKIwgKQO-5QHeTErWSsebupJByA0AbStOnE8Xj5-dn69_wEXIMDXmIV7SXZxCcktitxBOc9CbfDC1gL_5kEELhR6NtED99Ru_EMwROdSONwKCBwQo0sM4M9F-14y1y-rZm9PKtJ4jcyHvWcnoMXvoHIN3ezYgxMAtpMPs5QyA1O-dAx6SadSGPMHGDInwpSMP55gQSX8TfD4A6p-w?width=600&height=600&cropmode=none"/>
 					</div>
 					<div className="article-info">
-						<h3 className="article-headline">Решения за големи обекти</h3>
-						<h4>24/7</h4>
+						{/*<h3 className="article-headline">Решения за големи обекти</h3>*/}
+						<h4>Големи обекти - вендинг</h4>
 						<p className="article-text">
 							Ако вашият офис или производство е с по-голям брой служители или имате многобройни клиенти и
 							посетители ние препоръчваме големи еспресо автомати - вендинг машини. Благодарение на тях
@@ -68,7 +69,7 @@ class Teasers extends React.Component {
 							src="https://4zzlqw.db.files.1drv.com/y4mqAJKZ0altBL23zCupd3HO64jG3rT0oVotbT2bn9ABAVdcRktTIFM55EtTzff3ElCZ7LuKQB2q85f0cX_9kYh5-a8Z1tOzibGU3fRCm_I_Y9F7_YBMscC35iXPuuzfQ-tjVL27k2mHWBwDw3UuyZuUAW3GpUMdF9MtwTR9dq-5FWQwr-xJgrJ1H7xiWSihJHUXwBvy6Hh3eBfPlqMDuc6zA?width=2500&height=1667&cropmode=none"/>
 					</div>
 					<div className="article-info">
-						<h3 className="article-headline">Нашето кафе</h3>
+						<h3 className="article-headline">Кафе слелкции</h3>
 						<img src="/images/logo/TOKO_logo_BW.svg" className="logo"/>
 						<h2 className="section-headline">Office Coffee Beans</h2>
 						<p className="article-text">
@@ -77,22 +78,7 @@ class Teasers extends React.Component {
 						</p>
 					</div>
 				</article>
-
-				<article id="promo-teaser-2" className="article">
-					<div className="image-container">
-						{/*<img src="https://7ypwbg.db.files.1drv.com/y4mhwDdsv8WmLAKcczNxVy-C6WYD93PWUiyUtNMGZMKDoU-pZxOAPYOuXL8S9cB1Na227ED8zoBIXepBxqEKD0-YYQ6Y3yqzUUsLfWTLq1zfx01esjSnv1nfwaFdeHloP5Gp2ur1DvnSUABZr7iKkJD2udOy6nKG-_AWZFv1CPbqKLZ79n1BBHfZY5xbSi5eFbyiA2RwabcTkGVIYiw2gO_Zg?width=2000&height=1979&cropmode=none"/>*/}
-						<img src="https://edqvww.db.files.1drv.com/y4mlRz2RqmBy5vw2CxQe5yA2dUjLwsVhLAB44Ihc207Jzm6ZS2-B8IO_r7MuDK7j0_n-0NKvEuTusOU2ovrl7aRfQsIKAfzPgYcNUgjreUxVU-ykbnr79IbMiYuYq8JTneSRk5Lnu4aw5R9hr172iCROg2BLYx75KMqbsnwBzSAwp5HtmvVMisxHKsjkzhad7kNxrYmf4Afr8LB_rb9XWyFBA?width=2000&height=1979&cropmode=none"/>
-					</div>
-					<h3 className="article-headline">-50%</h3>
-					<div className="article-info">
-						<h4>-50%</h4>
-						<p className="article-text">
-							Възползвайте се от нашето специално предложение:<br/>
-							Пробвайте 1 месец нашето кафе с безплатна машина на 1/2 цена.
-						</p>
-					</div>
-				</article>
-
+				
 			</div>
 		);
 	}
