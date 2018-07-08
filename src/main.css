@@ -45,7 +45,7 @@ img {
   width: 100%; }
 
 h1, h2, h3 {
-  margin: 50px 0 20px 0; }
+  margin: 20px 0; }
 
 h2 {
   font-size: 2em; }
@@ -227,7 +227,7 @@ p {
     -o-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%); }
     #home #carousel .slide-text .headline {
-      font-size: 3em;
+      font-size: 3.5em;
       text-align: center;
       text-transform: uppercase;
       line-height: 1em;
@@ -399,18 +399,13 @@ p {
   #home #teasers .section-headline {
     -webkit-flex-basis: 100%;
     flex-basis: 100%; }
-  #home #teasers h4 {
-    font-size: 2em;
-    background-color: #a4a0a1;
-    color: #ffffff;
-    line-height: 1em;
-    padding: 10px; }
   #home #teasers .article {
     position: relative;
     height: 350px;
     width: 100%;
-    -webkit-flex-basis: 50%;
-    flex-basis: 50%;
+    overflow: hidden;
+    background-color: #ffffff;
+    border: 10px solid #f6f5f3;
     -webkit-transition: .4s;
     -moz-transition: .4s;
     transition: .4s;
@@ -418,29 +413,8 @@ p {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    overflow: hidden;
-    background-color: #ffffff;
-    border: 15px solid #f6f5f3; }
-    #home #teasers .article .image-container {
-      position: relative;
-      height: inherit;
-      overflow: hidden;
-      -webkit-flex-basis: 50%;
-      flex-basis: 50%;
-      -webkit-transition: .4s;
-      -moz-transition: .4s;
-      transition: .4s;
-      order: 2; }
-      #home #teasers .article .image-container img {
-        position: absolute;
-        left: 0;
-        top: 0;
-        height: 100%;
-        width: auto;
-        -webkit-transition: 1.3s;
-        -moz-transition: 1.3s;
-        transition: 1.3s; }
-    #home #teasers .article .article-headline {
+    margin-top: 25px; }
+    #home #teasers .article .section-name {
       position: absolute;
       top: 45%;
       left: 50%;
@@ -453,12 +427,45 @@ p {
       font-size: 1em;
       font-weight: 400;
       z-index: 2; }
+    #home #teasers .article .fa {
+      position: absolute;
+      left: 49.5%;
+      top: 20%;
+      -webkit-transform: translate(0, -50%);
+      -moz-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+      -o-transform: translate(0, -50%);
+      transform: translate(0, -50%);
+      -webkit-transition: .4s;
+      -moz-transition: .4s;
+      transition: .4s;
+      color: #ffffff;
+      font-size: 4em; }
+    #home #teasers .article .image-container {
+      position: relative;
+      overflow: hidden;
+      -webkit-flex-basis: 50%;
+      flex-basis: 50%;
+      -webkit-transition: .4s;
+      -moz-transition: .4s;
+      transition: .4s;
+      order: 2; }
+      #home #teasers .article .image-container img {
+        height: 100%;
+        width: auto;
+        -webkit-transition: 1.3s;
+        -moz-transition: 1.3s;
+        transition: 1.3s; }
     #home #teasers .article .article-info {
       -webkit-flex-basis: 50%;
       flex-basis: 50%;
-      padding: 25px 25px;
+      padding: 30px;
       font-size: .9em;
       order: 1; }
+      #home #teasers .article .article-info .article-headline {
+        font-size: 2em;
+        line-height: 1em;
+        margin-top: 0; }
       #home #teasers .article .article-info .article-text {
         opacity: .5;
         -webkit-transition: 1.3s;
@@ -468,25 +475,33 @@ p {
         max-width: 500px; }
     #home #teasers .article#promo-teaser {
       -webkit-flex-basis: 30%;
-      flex-basis: 30%;
-      background-color: #B10F1F; }
-      #home #teasers .article#promo-teaser .article-headline {
-        position: absolute;
-        width: 30%;
-        top: 5%;
-        left: auto;
-        right: 0;
-        padding: 10px 20px;
-        background-color: #B10F1F;
-        color: #ffffff;
-        font-size: 2em; }
+      flex-basis: 30%; }
       #home #teasers .article#promo-teaser .image-container {
-        flex-basis: 100%;
-        border-left: none;
-        position: relative; }
+        flex-basis: 100%; }
         #home #teasers .article#promo-teaser .image-container img {
           height: auto;
           width: 100%; }
+      #home #teasers .article#promo-teaser .section-name {
+        position: absolute;
+        width: 35%;
+        top: 5%;
+        left: auto;
+        right: 0;
+        padding: 10px;
+        background-color: #B10F1F;
+        color: #ffffff;
+        font-size: 2em; }
+        #home #teasers .article#promo-teaser .section-name .small {
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-align: center;
+          -moz-box-align: center;
+          -ms-flex-align: center;
+          -webkit-align-items: center;
+          align-items: center;
+          font-size: .4em; }
       #home #teasers .article#promo-teaser .article-info {
         position: absolute;
         opacity: 0;
@@ -498,9 +513,10 @@ p {
         -webkit-transition: 1.3s;
         -moz-transition: 1.3s;
         transition: 1.3s; }
-        #home #teasers .article#promo-teaser .article-info h4 {
+        #home #teasers .article#promo-teaser .article-info .article-headline {
           color: #c81020;
-          font-size: 6em; }
+          font-size: 6em;
+          background-color: transparent; }
     #home #teasers .article#office-teaser {
       -webkit-flex-basis: 70%;
       flex-basis: 70%; }
@@ -510,21 +526,42 @@ p {
         padding: 10px 0;
         margin: 0 20px;
         text-transform: uppercase; }
-    #home #teasers .article#coffee-teaser .logo {
-      width: 60px;
-      margin: auto; }
-    #home #teasers .article#coffee-teaser .section-headline {
-      font-weight: 300;
-      font-size: 1.3em;
-      text-transform: uppercase;
-      margin-top: 15px; }
-    #home #teasers .article#promo-teaser-2 h4 {
-      color: #c81020;
-      font-size: 3em; }
+    #home #teasers .article#vending-teaser {
+      -webkit-flex-basis: 70%;
+      flex-basis: 70%; }
+    #home #teasers .article#coffee-teaser {
+      -webkit-flex-basis: 30%;
+      flex-basis: 30%;
+      padding: 0; }
+      #home #teasers .article#coffee-teaser .image-container {
+        flex-basis: 100%; }
+      #home #teasers .article#coffee-teaser .article-info {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.1);
+        text-transform: uppercase;
+        padding: 25px;
+        -webkit-transition: 1.3s;
+        -moz-transition: 1.3s;
+        transition: 1.3s; }
+      #home #teasers .article#coffee-teaser .logo {
+        width: 60px;
+        margin: auto; }
+      #home #teasers .article#coffee-teaser .article-headline {
+        margin-top: 15px;
+        text-transform: uppercase;
+        background-color: transparent;
+        color: inherit;
+        font-weight: 400;
+        font-size: 1.3em;
+        padding: 0; }
     #home #teasers .article:hover {
       cursor: pointer; }
-      #home #teasers .article:hover .image-container img {
-        left: -10%; }
+      #home #teasers .article:hover .fa {
+        top: 50%; }
       #home #teasers .article:hover .article-text {
         opacity: 1;
         -webkit-transform: translate(0, 20px);
@@ -533,7 +570,7 @@ p {
         -o-transform: translate(0, 20px);
         transform: translate(0, 20px);
         color: #000; }
-      #home #teasers .article:hover .article-headline {
+      #home #teasers .article:hover .section-name {
         -webkit-transform: translate(0, -130%);
         -moz-transform: translate(0, -130%);
         -ms-transform: translate(0, -130%);
@@ -541,10 +578,17 @@ p {
         transform: translate(0, -130%); }
       #home #teasers .article:hover#promo-teaser img {
         left: 0; }
-      #home #teasers .article:hover#promo-teaser .article-headline {
+      #home #teasers .article:hover#promo-teaser .section-name {
+        -webkit-transform: translate(0, -130%);
+        -moz-transform: translate(0, -130%);
+        -ms-transform: translate(0, -130%);
+        -o-transform: translate(0, -130%);
+        transform: translate(0, -130%);
         opacity: 0; }
       #home #teasers .article:hover#promo-teaser .article-info {
         opacity: 1; }
+      #home #teasers .article:hover#coffee-teaser .article-info {
+        background-color: rgba(255, 255, 255, 0.9); }
 
 .section-banner {
   width: 100%;

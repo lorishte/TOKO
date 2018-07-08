@@ -241,7 +241,7 @@ img {
 }
 
 h1, h2, h3 {
-  margin: 50px 0 20px 0;
+  margin: 20px 0;
 }
 
 h2 {
@@ -431,7 +431,7 @@ p {
       //background-color: #ffffff96;
 
       .headline {
-        font-size: 3em;
+        font-size: 3.5em;
         text-align: center;
         text-transform: uppercase;
         line-height: 1em;
@@ -665,48 +665,19 @@ p {
       @include flex-basis(100%);
     }
 
-    h4 {
-      font-size: 2em;
-      background-color: $offices;
-      color: $white;
-      line-height: 1em;
-      padding: 10px;
-    }
-
     .article {
       position: relative;
       height: 350px;
       width: 100%;
-      @include flex-basis(50%);
-
-      @include transition;
-
-      @include flex;
-
+      //padding: 10px;
       overflow: hidden;
       background-color: $white;
-      border: 15px solid $warm-light-grey;
+      border: 10px solid $warm-light-grey;
+      @include transition;
+      @include flex;
+      margin-top: 25px;
 
-      .image-container {
-        position: relative;
-        height: inherit;
-        overflow: hidden;
-        //border-left: 2px solid transparent;
-        @include flex-basis(50%);
-        @include transition;
-        order: 2;
-
-        img {
-          position: absolute;
-          left: 0;
-          top: 0;
-          height: 100%;
-          width: auto;
-          @include transition-slow;
-        }
-      }
-
-      .article-headline {
+      .section-name {
         position: absolute;
         top: 45%;
         left: 50%;
@@ -719,13 +690,42 @@ p {
         z-index: 2;
       }
 
+      .fa {
+        position: absolute;
+        left: 49.5%;
+        top: 20%;
+        @include translate(0, -50%);
+        @include transition;
+        color: $white;
+        font-size: 4em;
+      }
 
+      .image-container {
+        position: relative;
+        overflow: hidden;
+        @include flex-basis(50%);
+
+        @include transition;
+        order: 2;
+
+        img {
+          height: 100%;
+          width: auto;
+          @include transition-slow;
+        }
+      }
 
       .article-info {
         @include flex-basis(50%);
-        padding: 25px 25px;
+        padding: 30px;
         font-size: .9em;
         order: 1;
+
+        .article-headline {
+          font-size: 2em;
+          line-height: 1em;
+          margin-top: 0;
+        }
 
         .article-text {
           opacity: .5;
@@ -738,29 +738,31 @@ p {
 
       &#promo-teaser {
         @include flex-basis(30%);
-        background-color: $primary-hover;
-
-        .article-headline {
-          position: absolute;
-          width: 30%;
-          top: 5%;
-          left: auto;
-          right: 0;
-          padding: 10px 20px;
-          background-color: $primary-hover;
-          color: $white;
-          font-size: 2em;
-        }
 
         .image-container {
           flex-basis: 100%;
-          border-left: none;
-
-          position: relative;
 
           img {
             height: auto;
             width: 100%;
+          }
+        }
+
+        .section-name {
+          position: absolute;
+          width: 35%;
+          top: 5%;
+          left: auto;
+          right: 0;
+          padding: 10px;
+          background-color: $primary-hover;
+          color: $white;
+          font-size: 2em;
+
+          .small {
+            @include flex;
+            @include align-items(center);
+            font-size: .4em;
           }
         }
 
@@ -775,67 +777,72 @@ p {
 
           @include transition-slow;
 
-          h4{
+          .article-headline {
             color: $primary;
             font-size: 6em;
+            background-color: transparent;
           }
         }
       }
 
       &#office-teaser {
         @include flex-basis(70%);
-        //background-color: $offices;
 
         .bullets {
           list-style-type: square;
           list-style-position: outside;
           padding: 10px 0;
-          //border-bottom: 1px solid $warm-light-grey;
           margin: 0 20px;
           text-transform: uppercase;
-
         }
       }
 
       &#vending-teaser {
-        //background-color: $vending;
+        @include flex-basis(70%);
       }
 
       &#coffee-teaser {
+        @include flex-basis(30%);
+        padding: 0;
+
+        .image-container {
+          flex-basis: 100%;
+        }
+
+        .article-info {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          background-color: rgba(255, 255, 255, .1);
+          text-transform: uppercase;
+          padding: 25px;
+
+          @include transition-slow;
+        }
+
         .logo {
           width: 60px;
           margin: auto;
         }
 
-        .section-headline {
-          font-weight: 300;
-          font-size: 1.3em;
-          text-transform: uppercase;
+        .article-headline {
           margin-top: 15px;
+          text-transform: uppercase;
+          background-color: transparent;
+          color: inherit;
+          font-weight: 400;
+          font-size: 1.3em;
+          padding: 0;
         }
-
-      }
-
-      &#promo-teaser-2 {
-        //background-color: $offices;
-
-        h4{
-          color: $primary;
-          font-size: 3em;
-        }
-
       }
 
       &:hover {
         cursor: pointer;
-        //background-color: $offices;
 
-        .image-container {
-          //border-left: 2px solid $white;
-
-          img {
-            left: -10%;
-          }
+        .fa {
+          top: 50%;
         }
 
         .article-text {
@@ -844,9 +851,7 @@ p {
           color: $black;
         }
 
-        .article-headline {
-          //background-color: $black;
-          //color: $medium-grey;
+        .section-name {
           @include translate(0, -130%);
         }
 
@@ -855,14 +860,19 @@ p {
             left: 0;
           }
 
-          .article-headline {
-            //@include translate(-20%, 0);
+          .section-name {
+            @include translate(0, -130%);
             opacity: 0;
           }
 
-
           .article-info {
             opacity: 1;
+          }
+        }
+
+        &#coffee-teaser {
+          .article-info {
+            background-color: rgba(255, 255, 255, .9);
           }
         }
       }
